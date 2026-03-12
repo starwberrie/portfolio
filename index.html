@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Safaâ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="hero">
+        <div class="scroller-container">
+            <h1 id="rolling-text">Bonjour, je suis Safaâ</h1>
+        </div>
+        <p>Junior Cybersecurity Engineer.</p>
+        <div class="links">
+            <a href="#projets">Mes Projets</a>
+            <a href="javascript:void(0)" class="btn-style" onclick="document.getElementById('cv-modal').style.display='block'">Mon CV</a>
+        </div>
+    </section>
+
+<section id="parcours">
+    <h2 class="section-title">Mon Parcours</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>2026 - Poste actuel</h3>
+            <p>Ta description ici...</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2025 - Stage de fin d'études</h3>
+            <p>Ta description ici...</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2024 - Projet universitaire</h3>
+            <p>Ta description ici...</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2023 - Début de formation</h3>
+            <p>Ta description ici...</p>
+        </div>
+    </div>
+</section>
+
+<section id="competences">
+        <h2 class="section-title">Mes Compétences Techniques</h2>
+        <div class="skills-container">
+            <span class="badge">PowerShell</span>
+            <span class="badge">Serveur Exchange</span>
+            <span class="badge">Active Directory</span>
+            <span class="badge">GPO Complexes</span>
+        </div>
+    </section>
+
+<section id="projets">
+    <h2 class="section-title">Mes Réalisations</h2>
+    
+    <div class="projects-grid">
+        
+        <div class="project-card">
+            <div class="project-image"></div>
+            <div class="project-info">
+                <h3>Déploiement de bornes MalwareCleaners par OrangeCyberdéfense</h3>
+                <p>Description rapide de ton projet.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image"></div>
+            <div class="project-info">
+                <h3>Déploiement de Bitlocker par script PowerShell</h3>
+                <p>Description rapide de ton deuxième projet.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image"></div>
+            <div class="project-info">
+                <h3>Ce site web!</h3>
+                <p>Description rapide de ton troisième projet.</p>
+            </div>
+        </div>
+        
+    </div> </section>
+
+    <section id="skills">
+        <h2 class="section-title">Mes Compétences</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <div class="skill-icon">🎨</div>
+                <p>Design</p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">💻</div>
+                <p>Développement</p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">📸</div>
+                <p>Photo</p>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="document.getElementById('cv-modal').style.display='none'">&times;</span>
+            <iframe src="cv-safaa.pdf" width="100%" height="500px"></iframe>
+        </div>
+    </div> 
+
+    <script>
+        const greetings = [
+            "Bonjour, je suis Safaâ",
+            "Hello, I'm Safaâ",
+            "Привет, я Сафаа",
+            "Hola, soy Safaâ",
+            "你好，我是Safaâ",           
+            "أهلاً، أنا صفاء"
+            
+        ];
+        const rollingText = document.getElementById("rolling-text");
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentWord = greetings[wordIndex];
+        
+            if (isDeleting) {
+                rollingText.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                rollingText.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 30 : 70;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 1500; // Pause avant d'effacer
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % greetings.length;
+                typeSpeed = 300;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        type(); // Lancement de la machine à écrire
+    </script>
+    <a href="#" class="top-button">↑</a>
+</body>
+</html>
