@@ -6,13 +6,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color :#000000;
 }
 
 body {
+    /* Un dégradé "Blue Night" très pro qui rappelle l'informatique */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed; /* Le fond reste fixe quand tu scrolles */
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9; /* Un gris très très clair, plus doux */
 }
 
 /* 2. Chaque section devient une "page" indépendante */
@@ -235,4 +238,122 @@ body { background-color: var(--bg-color); }
     height: 15px;
     background: #111;
     border-radius: 50%;
+}
+
+
+/* Utilise ".badge" car c'est ce que tu as écrit dans ton HTML */
+.badge {
+    background: #ffffff; 
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 8px; 
+    border: 1px solid #000000;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block; /* Très important pour que le padding marche bien */
+    transition: 0.3s;
+    margin: 5px; /* Pour qu'ils ne se touchent pas */
+}
+
+.badge:hover {
+    background: #4483b3;
+    color: rgb(255, 255, 255);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 120, 212, 0.4);
+}
+
+
+.skills-container {
+    display: flex;
+    justify-content: center; /* Centre les 3 blocs */
+    align-items: stretch;    /* Force les blocs à avoir la même hauteur */
+    gap: 20px;               /* Espace raisonnable entre les blocs */
+    flex-wrap: nowrap;       /* FORCE le maintien sur une seule ligne */
+    margin: 40px auto;
+    max-width: 1000px;       /* Empêche que ça s'étale trop sur les écrans géants */
+}
+
+.skill-item {
+    flex: 1;                 /* Chaque bloc prend la même largeur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    background: white;
+    padding: 25px 15px;      /* Padding plus petit */
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    
+    max-width: 250px;        /* Largeur max pour éviter l'effet "trop grand" */
+    transition: 0.3s;
+}
+
+/* On réduit la taille des titres et icônes */
+.skill-icon {
+    font-size: 35px;         /* Icône plus petite */
+    margin-bottom: 10px;
+}
+
+.skill-item h3 {
+    font-weight: 800;
+    font-size: 1.1rem;       /* Titre plus discret */
+    margin: 10px 0;
+}
+
+.skill-item p {
+    font-size: 0.85rem;      /* Description plus petite */
+    color: #000000;
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.7); /* Blanc transparent */
+    backdrop-filter: blur(10px); /* Flou derrière la carte */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    /* ... garde le reste de ton code ... */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000000;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.1); /* Ombre légère sous les lettres */
+}
+
+.tech-stack {
+    text-align: center;
+    margin-top: 50px;
+}
+.tech-icons span {
+    display: inline-block;
+    background: #ffffff;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.badge {
+    background:  #ffffff; /* Vide à l'intérieur */
+    color: #000000;          /* Texte noir */
+    padding: 10px 20px;      /* Même taille que ceux du haut */
+    border-radius: 8px;      /* Coins légèrement arrondis */
+    border: 2px solid #000000; /* La bordure noire bien visible */
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px;            /* Pour pas qu'ils se collent */
+    transition: 0.3s;
+}
+
+/* L'effet de remplissage quand on passe la souris */
+.badge:hover {
+    background: #6195c9;
+    color: white;
 }
