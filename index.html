@@ -2,168 +2,332 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio Safaâ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Safaâ — Junior Cybersecurity Engineer. Portfolio de compétences en cybersécurité, administration système et réseaux.">
+    <title>Starworld</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❀</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="cyber-grid-overlay"></div>
+    <div id="sparkle-container"></div>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">Starworld</a>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cv-btn" onclick="document.getElementById('cv-modal').style.display='flex'">Mon CV</button>
+            <button class="burger" id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about" class="mobile-link">À propos</a>
+        <a href="#parcours" class="mobile-link">Parcours</a>
+        <a href="#competences" class="mobile-link">Compétences</a>
+        <a href="#projets" class="mobile-link">Projets</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="javascript:void(0)" class="mobile-link mobile-cv" onclick="document.getElementById('cv-modal').style.display='flex'; document.getElementById('mobile-menu').classList.remove('open')">Mon CV</a>
+    </div>
+
+    <!-- HERO -->
     <section id="hero">
-        <div class="scroller-container">
-            <h1 id="rolling-text">Bonjour, je suis Safaâ</h1>
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-tag reveal">Disponible pour alternance octobre 2026</div>
+            <h1 id="rolling-text" class="reveal reveal-delay-1">Bonjour, je suis Safaâ</h1>
+            <p class="hero-subtitle reveal reveal-delay-2">Junior <span class="accent">Cybersecurity</span> Engineer</p>
+            <p class="hero-desc reveal reveal-delay-3">Passionnée par la sécurité des systèmes, la protection des données et l'automatisation. En formation à Metz Numeric School.</p>
+            <div class="hero-actions reveal reveal-delay-4">
+                <a href="#projets" class="btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn-outline">Me contacter</a>
+            </div>
         </div>
-        <p>Junior Cybersecurity Engineer.</p>
-        <div class="links">
-            <a href="#projets">Mes Projets</a>
-            <a href="javascript:void(0)" class="btn-style" onclick="document.getElementById('cv-modal').style.display='block'">Mon CV</a>
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-<section id="parcours">
-    <h2 class="section-title">Mon Parcours Scolaire</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <h3>2026-2028 | Master Expert en Architecture Systèmes, Réseaux et Sécurité Informatique </h3>
-            <p>Metz Numeric School</p>
-        </div>
-        <div class="timeline-item">
-            <h3>2025-2026 | Bachelor Réseaux et Cybersécurité</h3>
-            <p>Metz Numeric School</p>
-        </div>
-        <div class="timeline-item">
-            <h3>2023-2025 | BTS SIO SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</h3>
-            <p>NDF-ES Groupe BPC-ESC</p>
-        </div>
-        <div class="timeline-item">
-            <h3>2020-2023 Baccalauréat Générale  </h3>
-            <p>Ta description ici...</p>
-        </div>
-    </div>
-</section>
-
-<section id="competences">
-        <h2 class="section-title">Mes Compétences Techniques</h2>
-        <div class="skills-container">
-            <span class="badge">PowerShell</span>
-            <span class="badge">Serveur Exchange</span>
-            <span class="badge">Active Directory</span>
-            <span class="badge">GPO Complexes</span>
+    <!-- À PROPOS -->
+    <section id="about">
+        <div class="about-inner">
+            <div class="about-text fade-in">
+                <h2 class="section-title left-align">À propos de moi</h2>
+                <p>Je suis Safaâ, étudiante en cybersécurité à <strong>Metz Numeric School</strong>. Après un BTS SIO SISR, je poursuis en Bachelor puis en Master spécialisé en sécurité des systèmes, réseaux et cybersécurité.</p>
+                <p>Mon quotidien : maintenir des infrastructures Windows, automatiser des tâches avec PowerShell, et comprendre comment les systèmes peuvent être compromis pour mieux les défendre.</p>
+                <p>Proactive, rigoureuse et déterminée, je cherche à mettre mes compétences au sein d'une équipe qui font de la sécurité une priorité.</p>
+            </div>
+            <div class="about-stats fade-in">
+                <div class="stat-card">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Projets réalisés</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Ans d'expérience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Technologies maîtrisées</span>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- PARCOURS -->
+    <section id="parcours">
+        <h2 class="section-title fade-in">Mon Parcours</h2>
+        <div class="timeline fade-in">
 
-<div class="tech-stack">
-    <h2 class="section-title">Outils maîtrisés</h2>
-    <div class="tech-icons">
-        <span class="badge">Windows Server</span>
-        <span class="badge">VMware</span>
-        <span class="badge">Wireshark</span>
-        <span class="badge">Azure AD</span>
-        <span class="badge">Linux (Debian)</span>
-    </div>
-</div>
-
-<section id="projets">
-    <h2 class="section-title">Mes Réalisations</h2>
-    
-    <div class="projects-grid">
-        
-        <div class="project-card">
-            <div class="project-image"></div>
-            <div class="project-info">
-                <h3>Déploiement de bornes MalwareCleaners par OrangeCyberdéfense</h3>
-                <p>Description rapide de ton projet.</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2026 – 2028</span>
+                    <h3>Master of Science en Cybersécurité, Cloud, Systèmes et Réseaux.</h3>
+                    <p class="timeline-school">Geneva Institute of Technology</p>
+                    <p>Spécialisation avancée en sécurité des infrastructures, architecture réseau et gouvernance SI.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <div class="project-image"></div>
-            <div class="project-info">
-                <h3>Déploiement de Bitlocker par script PowerShell</h3>
-                <p>Description rapide de ton deuxième projet.</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2025 – 2026</span>
+                    <h3>Bachelor Réseaux et Cybersécurité</h3>
+                    <p class="timeline-school">Metz Numeric School</p>
+                    <p>Approfondissement des protocoles réseaux, des solutions de sécurité et des environnements cloud.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <div class="project-image"></div>
-            <div class="project-info">
-                <h3>Ce site web!</h3>
-                <p>Description rapide de ton troisième projet.</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2023 – 2025</span>
+                    <h3>BTS SIO option SISR</h3>
+                    <p class="timeline-school">NDF-ES Groupe BPC-ESC</p>
+                    <p>Solutions d'Infrastructure, Systèmes et Réseaux. Administration Windows Server, virtualisation, scripting PowerShell.</p>
+                </div>
             </div>
-        </div>
-        
-    </div> </section>
 
-    <section id="skills">
-        <h2 class="section-title">Mes Compétences</h2>
-        <div class="skills-container">
-            <div class="skill-item">
-                <div class="skill-icon">🔒</div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2020 – 2023</span>
+                    <h3>Baccalauréat Général</h3>
+                    <p class="timeline-school">Lycée Charles Jully</p>
+                    <p>Obtention du baccalauréat général option européenne, avec spécialité LLCE (Langues, Littératures et Cultures Étrangères) et NSI (Numérique et Science de l'Informatique).</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="competences">
+        <h2 class="section-title fade-in">Mes Compétences</h2>
+
+        <div class="skills-grid fade-in">
+
+            <div class="skill-block">
+                <div class="skill-block-icon">🔒</div>
                 <h3>Cybersécurité</h3>
-                <p>Bitlocker & Chiffrement</p>
+                <ul>
+                    <li>Chiffrement BitLocker</li>
+                    <li>Déploiement MalwareCleaner</li>
+                    <li>Analyse de vulnérabilités</li>
+                    <li>Hardening Windows</li>
+                </ul>
             </div>
-            <div class="skill-item">
-                <div class="skill-icon">💻</div>
-                <h3>Admin Système</h3>
-                <p>Active Directory & GPO</p>
+
+            <div class="skill-block">
+                <div class="skill-block-icon">🖥️</div>
+                <h3>Administration Système</h3>
+                <ul>
+                    <li>Active Directory & GPO</li>
+                    <li>Windows Server 2019/2022</li>
+                    <li>Exchange Server</li>
+                    <li>Linux (Debian)</li>
+                </ul>
             </div>
-            <div class="skill-item">
-                <div class="skill-icon">🛡️</div>
-                <h3>Scripting</h3>
-                <p>PowerShell & Automatisation</p>
+
+            <div class="skill-block">
+                <div class="skill-block-icon">⚡</div>
+                <h3>Scripting & Automatisation</h3>
+                <ul>
+                    <li>PowerShell avancé</li>
+                    <li>Scripts de déploiement</li>
+                    <li>Automatisation de tâches</li>
+                    <li>GPO complexes</li>
+                </ul>
+            </div>
+
+            <div class="skill-block">
+                <div class="skill-block-icon">🌐</div>
+                <h3>Réseaux & Cloud</h3>
+                <ul>
+                    <li>Cisco IP</li>
+                    <li>Wireshark</li>
+                    <li>VMware</li>
+                    <li>Protocoles TCP/IP</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="badges-section fade-in">
+            <h3 class="badges-title">Outils & Technologies</h3>
+            <div class="badges-wrap">
+                <span class="badge">PowerShell</span>
+                <span class="badge">Windows Server</span>
+                <span class="badge">Active Directory</span>
+                <span class="badge">VMware</span>
+                <span class="badge">Wireshark</span>
+                <span class="badge">Cisco IP</span>
+                <span class="badge">Linux Debian</span>
+                <span class="badge">Exchange Server</span>
+                <span class="badge">GPO</span>
+                <span class="badge">BitLocker</span>
+            </div>
         </div>
     </section>
 
+    <!-- PROJETS -->
+    <section id="projets">
+        <h2 class="section-title fade-in">Mes Réalisations</h2>
+        <div class="projects-grid fade-in">
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-icon">🦠</span>
+                    <span class="project-tag">Sécurité Endpoint</span>
+                </div>
+                <h3>Déploiement de bornes MalwareCleaners</h3>
+                <p>Déploiement et configuration de bornes MalwareCleaner en partenariat avec OrangeCyberdéfense. Mise en place des procédures d'utilisation et sensibilisation des utilisateurs.</p>
+                <div class="project-stack">
+                    <span>OrangeCyberdéfense</span>
+                    <span>Endpoint Security</span>
+                    <span>Documentation</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-icon">🔐</span>
+                    <span class="project-tag">Scripting PowerShell</span>
+                </div>
+                <h3>Déploiement de BitLocker par script PowerShell</h3>
+                <p>Automatisation du chiffrement BitLocker sur un parc de postes Windows via un script PowerShell centralisé. Gestion des clés de récupération dans Active Directory.</p>
+                <div class="project-stack">
+                    <span>PowerShell</span>
+                    <span>BitLocker</span>
+                    <span>Active Directory</span>
+                    <span>Windows Server</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-icon">💻</span>
+                    <span class="project-tag">Développement Web</span>
+                </div>
+                <h3>Ce portfolio</h3>
+                <p>Conception et développement d'un portfolio personnel en HTML/CSS/JS vanilla. Design responsive, animations CSS, et intégration d'un viewer PDF pour le CV.</p>
+                <div class="project-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Design</span>
+                </div>
+            </div>
+
+        </div>
     </section>
 
-    <div id="cv-modal" class="modal">
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2 class="section-title fade-in">Me Contacter</h2>
+        <div class="contact-inner fade-in">
+            <div class="contact-text">
+                <p>Je suis ouverte aux opportunités d'alternance, de stage, ou simplement à un échange autour de la cybersécurité. N'hésitez pas à me contacter !</p>
+            </div>
+            <div class="contact-links">
+                <a href="mailto:fremsafaa.it@gmail.com" class="contact-card">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <strong>Email</strong>
+                        <span>fremsafaa.it@gmail.com</span>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
+                <a href="https://www.linkedin.com/in/safaâ-frem/" target="_blank" class="contact-card">
+                    <span class="contact-icon">💼</span>
+                    <div>
+                        <strong>LinkedIn</strong>
+                        <span>linkedin.com/in/safaâ-frem/</span>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
+                
+            </div>
+            <button class="btn-primary" onclick="document.getElementById('cv-modal').style.display='flex'">Télécharger mon CV</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <span class="footer-logo">Starworld</span>
+            <p>© 2026 Safaâ — Junior Cybersecurity Engineer</p>
+        </div>
+    </footer>
+
+    <!-- MODALE CV -->
+    <div id="cv-modal" class="modal" onclick="if(event.target===this) this.style.display='none'">
         <div class="modal-content">
-            <span class="close-button" onclick="document.getElementById('cv-modal').style.display='none'">&times;</span>
-            <iframe src="cv-safaa.pdf" width="100%" height="500px"></iframe>
+            <button class="close-button" onclick="document.getElementById('cv-modal').style.display='none'">&times;</button>
+            <h3 class="modal-title">Curriculum Vitæ</h3>
+            <iframe src="cv-safaa.pdf" width="100%" height="500px" title="CV Safaâ"></iframe>
+            <a href="cv-safaa.pdf" download class="btn-primary modal-download">⬇ Télécharger le PDF</a>
         </div>
-    </div> 
+    </div>
+
+    <!-- Bouton retour en haut -->
+    <button class="top-button" id="top-btn" aria-label="Retour en haut" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+    <script src="script.js"></script>
 
     <script>
-        const greetings = [
-            "Bonjour, je suis Safaâ",
-            "Hello, I'm Safaâ",
-            "Привет, я Сафаа",
-            "Hola, soy Safaâ",
-            "你好，我是 萨法",           
-            "أهلاً، أنا صفاء"
-            
-        ];
-        const rollingText = document.getElementById("rolling-text");
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
+    const container = document.getElementById('sparkle-container');
+    const sparkleCount = 30; // Tu peux augmenter ce nombre si tu en veux plus !
 
-        function type() {
-            const currentWord = greetings[wordIndex];
+    for (let i = 0; i < sparkleCount; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
         
-            if (isDeleting) {
-                rollingText.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                rollingText.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            let typeSpeed = isDeleting ? 30 : 70;
-
-            if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 1500; // Pause avant d'effacer
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % greetings.length;
-                typeSpeed = 300;
-            }
-
-            setTimeout(type, typeSpeed);
-        }
-
-        type(); // Lancement de la machine à écrire
-    </script>
-    <a href="#" class="top-button">↑</a>
+        // Position aléatoire
+        sparkle.style.left = Math.random() * 100 + '%';
+        sparkle.style.top = Math.random() * 100 + '%';
+        
+        // Délai d'animation aléatoire pour pas qu'elles clignotent toutes en même temps
+        sparkle.style.animationDelay = Math.random() * 5 + 's';
+        sparkle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        
+        container.appendChild(sparkle);
+    }
+</script>
 </body>
 </html>
