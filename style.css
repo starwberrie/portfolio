@@ -1232,3 +1232,57 @@ body::after {
     box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
     transform: translateY(-10px) rotate(1deg); /* Petit tilt sympa */
 }
+
+p {
+    text-wrap: balance; /* Répartit harmonieusement le texte sur les lignes */
+    max-width: 600px;   /* Empêche la ligne d'être trop longue et fatigante à lire */
+    margin: 0 auto;     /* Centre le bloc de texte */
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 20px;
+    /* On utilise ton rose néon pour bien décoller la carte du fond */
+    border: 2px solid #ff007f; 
+    /* On ajoute un halo rose tout autour pour créer de la profondeur */
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.4); 
+    margin-top: 30px;
+    background: #1a051a !important; /* Un fond violet très sombre plutôt que noir pur */
+}
+
+/* On assombrit légèrement les tuiles de la carte pour le look Cyber */
+.leaflet-container {
+    background: #0d020d !important;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Animation de pulsation pour le point bleu */
+.leaflet-interactive[stroke="#00f2ff"] {
+    filter: drop-shadow(0 0 5px #00f2ff);
+    animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+    0% { filter: drop-shadow(0 0 2px #00f2ff); opacity: 1; }
+    50% { filter: drop-shadow(0 0 10px #00f2ff); opacity: 0.8; }
+    100% { filter: drop-shadow(0 0 2px #00f2ff); opacity: 1; }
+}
+
+
+.reveal:hover {
+    text-shadow: 
+        0.05em 0 0 #ff007f, 
+        -0.025em -0.05em 0 #00f2ff,
+        0.025em 0.05em 0 #ffffff;
+    animation: glitch 500ms infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}

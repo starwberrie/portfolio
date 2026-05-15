@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 
@@ -50,7 +51,7 @@
             <div class="hero-tag reveal">Disponible pour alternance octobre 2026</div>
             <h1 id="rolling-text" class="reveal reveal-delay-1">Bonjour, je suis Safaâ</h1>
             <p class="hero-subtitle reveal reveal-delay-2">Junior <span class="accent">Cybersecurity</span> Engineer</p>
-            <p class="hero-desc reveal reveal-delay-3">Passionnée par la sécurité des systèmes, la protection des données et l'automatisation. En formation à Metz Numeric School.</p>
+            <p class="hero-desc reveal reveal-delay-3">Bienvenue dans mon <strong> Starworld </strong>. En Bachelor Réseaux et Cybersécurité à Metz Numeric School.</p>
             <div class="hero-actions reveal reveal-delay-4">
                 <a href="#projets" class="btn-primary">Voir mes projets</a>
                 <a href="#contact" class="btn-outline">Me contacter</a>
@@ -66,9 +67,9 @@
     <section id="about">
         <div class="about-inner">
             <div class="about-text fade-in">
-                <h2 class="section-title left-align">À propos de moi</h2>
-                <p>Je suis Safaâ, étudiante en cybersécurité à <strong>Metz Numeric School</strong>. Après un BTS SIO SISR, je poursuis en Bachelor puis en Master spécialisé en sécurité des systèmes, réseaux et cybersécurité.</p>
-                <p>Mon quotidien : maintenir des infrastructures Windows, automatiser des tâches avec PowerShell, et comprendre comment les systèmes peuvent être compromis pour mieux les défendre.</p>
+                <h2 class="section-title left-align">Safaâ?</h2>
+                <p>Étudiante en cybersécurité à <strong>Metz Numeric School</strong>. Après un BTS SIO SISR, je poursuis en Bachelor puis en Master afin d'être ingénieure en Cybersécurité.</p>
+                <p>Mon quotidien : maintenir des infrastructures Windows (Linux en autoditacte), automatiser des tâches avec PowerShell par GPO, et comprendre comment les systèmes peuvent être compromis pour mieux les défendre.</p>
                 <p>Proactive, rigoureuse et déterminée, je cherche à mettre mes compétences au sein d'une équipe qui font de la sécurité une priorité.</p>
             </div>
             <div class="about-stats fade-in">
@@ -90,7 +91,7 @@
 
     <!-- PARCOURS -->
     <section id="parcours">
-        <h2 class="section-title fade-in">Mon Parcours</h2>
+        <h2 class="section-title fade-in">Oui, j'aime l'école</h2>
         <div class="timeline fade-in">
 
             <div class="timeline-item">
@@ -138,7 +139,7 @@
 
     <!-- COMPÉTENCES -->
     <section id="competences">
-        <h2 class="section-title fade-in">Mes Compétences</h2>
+        <h2 class="section-title fade-in reveal">Do I got skills?</h2>
 
         <div class="skills-grid fade-in">
 
@@ -158,9 +159,9 @@
                 <h3>Administration Système</h3>
                 <ul>
                     <li>Active Directory & GPO</li>
-                    <li>Windows Server 2019/2022</li>
+                    <li>Windows Server 2019-2025</li>
                     <li>Exchange Server</li>
-                    <li>Linux (Debian)</li>
+                    <li>Vade Cloud</li>
                 </ul>
             </div>
 
@@ -207,16 +208,16 @@
 
     <!-- PROJETS -->
     <section id="projets">
-        <h2 class="section-title fade-in">Mes Réalisations</h2>
+        <h2 class="section-title fade-in">Concrètement, ça donne quoi?</h2>
         <div class="projects-grid fade-in">
 
             <div class="project-card">
                 <div class="project-header">
-                    <span class="project-icon">🦠</span>
+                    <span class="project-icon">👨🏻‍💻</span>
                     <span class="project-tag">Sécurité Endpoint</span>
                 </div>
                 <h3>Déploiement de bornes MalwareCleaners</h3>
-                <p>Déploiement et configuration de bornes MalwareCleaner en partenariat avec OrangeCyberdéfense. Mise en place des procédures d'utilisation et sensibilisation des utilisateurs.</p>
+                <p>Ces bornes permettent de bloquer les devices externe, il faut d'abord les passer sur bornes afin d'installer un certificat signé. Merci à mon tuteur Mr PORT de m'avoir laissé réaliser ce magnifique projet seule.</p>
                 <div class="project-stack">
                     <span>OrangeCyberdéfense</span>
                     <span>Endpoint Security</span>
@@ -230,7 +231,7 @@
                     <span class="project-tag">Scripting PowerShell</span>
                 </div>
                 <h3>Déploiement de BitLocker par script PowerShell</h3>
-                <p>Automatisation du chiffrement BitLocker sur un parc de postes Windows via un script PowerShell centralisé. Gestion des clés de récupération dans Active Directory.</p>
+                <p>BitLocker chiffre tout les postes du parc via un script PowerShell déployé par GPO. Gestion des clés de récupération dans Active Directory.</p>
                 <div class="project-stack">
                     <span>PowerShell</span>
                     <span>BitLocker</span>
@@ -245,7 +246,7 @@
                     <span class="project-tag">Développement Web</span>
                 </div>
                 <h3>Ce portfolio</h3>
-                <p>Conception et développement d'un portfolio personnel en HTML/CSS/JS vanilla. Design responsive, animations CSS, et intégration d'un viewer PDF pour le CV.</p>
+                <p>N'ayant aucune notions en code, je me suis lancée le défi de réaliser entièrement ce portfolio sans template ou autre! L'IA à été mon mentor durant sa réalisation, mais j'en suis fière car ce site est à mon image.</p>
                 <div class="project-stack">
                     <span>HTML</span>
                     <span>CSS</span>
@@ -259,10 +260,11 @@
 
     <!-- CONTACT -->
     <section id="contact">
-        <h2 class="section-title fade-in">Me Contacter</h2>
+        <h2 class="section-title fade-in">Allô Safaâ?</h2>
         <div class="contact-inner fade-in">
             <div class="contact-text">
-                <p>Je suis ouverte aux opportunités d'alternance, de stage, ou simplement à un échange autour de la cybersécurité. N'hésitez pas à me contacter !</p>
+                <p>Je recherche une alternance dans le cadre de mon Master pour une durée de 2 ans.</p>
+                <p>N'hésitez pas à me contacter !</p>
             </div>
             <div class="contact-links">
                 <a href="mailto:fremsafaa.it@gmail.com" class="contact-card">
@@ -286,6 +288,44 @@
             <button class="btn-primary" onclick="document.getElementById('cv-modal').style.display='flex'">Télécharger mon CV</button>
         </div>
     </section>
+
+    <section id="mobility">
+        <section id="competences">
+        <h2 class="section-title fade-in">Où suis-je?</h2>
+            <div class="title-underline"></div> 
+        <div id="map"></div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        // Initialisation de la carte centrée sur Genève
+        const map = L.map('map', {
+            scrollWheelZoom: false // Évite de zoomer par erreur en scrollant la page
+        }).setView([46.2044, 6.1432], 11);
+
+        // Fond de carte Dark Mode (CartoDB Voyager Dark)
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Zone de recherche (Cercle rose néon)
+        const searchArea = L.circle([46.2044, 6.1432], {
+            color: '#ff007f',      
+            fillColor: '#ff007f',
+            fillOpacity: 0.15,
+            radius: 20000 // Rayon de 20km
+        }).addTo(map);
+
+        // Le point bleu (Cyan) uniquement sur Genève
+        L.circleMarker([46.2044, 6.1432], {
+            radius: 8,
+            color: '#00f2ff',
+            fillColor: '#00f2ff',
+            fillOpacity: 1,
+            weight: 2
+        }).addTo(map).bindPopup("<b>Genève & Grand Genève</b><br>Secteur prioritaire.");
+    </script>
 
     <!-- FOOTER -->
     <footer>
